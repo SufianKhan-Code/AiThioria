@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Studies | LearnAIHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #011216, #051b22, #41697a);
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #37667a;
+            text-decoration: none;
+            font-family: 'Agency FB';
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #8acce8;
+            font-family: 'Agency FB';
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            border-radius: 12px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 50px;
+            font-family: 'Agency FB';
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: 'Agency FB';
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            font-family: 'Agency FB';
+            margin: auto;
+        }
+
+        /* Main Section */
+        .main-section {
+            display: flex;
+            font-family: 'Agency FB';
+            flex-wrap: wrap;
+            padding: 50px 20px;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-content {
+            flex: 1 1 500px;
+            font-family: 'Agency FB';
+            max-width: 700px;
+        }
+
+        .image-content {
+            flex: 1 1 400px;
+            font-family: 'Agency FB';
+        }
+
+        .examples ul {
+            list-style: none;
+            font-family: 'Agency FB';
+            margin-top: 20px;
+        }
+
+        .examples li {
+            display: flex;
+            align-items: center;
+            font-family: 'Agency FB';
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .examples li img {
+            width: 40px;
+            font-family: 'Agency FB';
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        /* AI Topics Section */
+        .topics {
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            font-family: 'Agency FB';
+            border-radius: 15px;
+            margin: 50px 20px;
+        }
+
+        .topics h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-family: 'Agency FB';
+        }
+
+        .topic-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            font-family: 'Agency FB';
+            margin-bottom: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            font-family: 'Agency FB';
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .topic-card h3 {
+            margin-bottom: 15px;
+            font-family: 'Agency FB';
+        }
+
+        .topic-card ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .topic-card ul li {
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-family: 'Agency FB';
+        }
+
+        li {
+            font-family: 'Agency FB';
+        }
+
+
+
+
+        /* From Uiverse.io by Mhyar-nsi */
+        #bb {
+            background-color: #f3f7fe;
+            font-size: large;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            width: 110px;
+            height: 45px;
+            transition: 0.3s;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        #bb:hover {
+            background-color: #011216;
+            box-shadow: 0 0 0 5px #062f475f;
+        }
+
+        .a {
+            font-family: 'Agency FB';
+            color: #011216;
+            text-decoration: none;
+        }
+
+        .a:hover {
+            color: #ffffff;
+        }
+
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px 20px;
+            margin-top: 50px;
+            color: #cfdce5;
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: #b9f7f7;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button id="bb"><a class="a" href="Index.html">&#8592; Go Back</a></button>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>AI Studies</h1>
+        <p>Explore the world of Artificial Intelligence, understand its technologies, and learn how to shape the future
+            with AI.</p>
+    </section>
+
+    <!-- Main AI Introduction Section -->
+    <section class="main-section">
+        <div class="text-content">
+            <h1>What is Artificial Intelligence?</h1>
+            <p>
+                Artificial Intelligence, or AI, is the ability of a computer or machine to mimic the capabilities of the
+                human mind—learning from experiences, understanding language, recognizing patterns, solving problems,
+                and making decisions.
+            </p>
+            <h3>Why is AI So Powerful?</h3>
+            <p>
+                AI doesn’t just perform tasks—it improves itself through data. That’s why AI is used in everything from
+                voice assistants to self-driving cars, from medical diagnostics to financial forecasting.
+            </p>
+            <h3>Real Examples of AI You Use Every Day:</h3>
+            <div class="examples">
+                <ul>
+                    <li><img src="7.png" alt="ChatGPT"> ChatGPT – Answers your questions like a human</li>
+                    <li><img src="8.png" alt="Tesla"> Tesla Autopilot – Self-driving AI in cars</li>
+                    <li><img src="11.png" alt="Siri"> Siri – AI voice assistants in your home</li>
+                    <li><img src="13.png" alt="Google Translate"> Google Translate – Understand any language instantly
+                    </li>
+                    <li><img src="14.png" alt="YouTube"> YouTube & Netflix – Recommend the next video you'll love</li>
+                </ul>
+            </div>
+            <h3>The Future is Here</h3>
+            <p>
+                AI is already changing the world. In the future, it will help cure diseases, protect the planet, and
+                make our lives smarter and easier. Learning about AI now puts you ahead of the curve.
+            </p>
+        </div>
+
+        <div class="image-content">
+            <img src="6.jpg" alt="AI Future">
+        </div>
+    </section>
+
+    <!-- AI Topics Section -->
+    <section class="topics">
+        <h2>Key AI Study Topics</h2>
+
+        <div class="topic-card">
+            <h3>Machine Learning (ML)</h3>
+            <p>
+                Machine Learning enables computers to learn from data without being explicitly programmed. It includes
+                :
+            </p>
+            <ul>
+                <li>Supervised Learning: Learn from labeled data (e.g., spam detection)</li>
+                <li>Unsupervised Learning: Find patterns in unlabeled data (e.g., customer segmentation)</li>
+                <li>Reinforcement Learning: Learn by trial and error (e.g., game AI, robotics)</li>
+            </ul>
+            <p><strong>Applications:</strong> Recommendation systems, fraud detection, predictive analytics.</p>
+        </div>
+
+        <div class="topic-card">
+            <h3>Deep Learning (DL)</h3>
+            <p>
+                Deep Learning uses neural networks with multiple layers to process complex data.
+            </p>
+            <ul>
+                <li>Convolutional Neural Networks (CNNs) – Image & video analysis</li>
+                <li>Recurrent Neural Networks (RNNs) – Sequence data like text & speech</li>
+                <li>Transformers – NLP and large language models</li>
+            </ul>
+            <p><strong>Applications:</strong> Autonomous vehicles, voice assistants, medical image diagnosis.</p>
+        </div>
+
+        <div class="topic-card">
+            <h3>Natural Language Processing (NLP)</h3>
+            <p>
+                NLP allows machines to understand, interpret, and respond to human language.
+            </p>
+            <ul>
+                <li>Sentiment Analysis – Detect emotions in text</li>
+                <li>Machine Translation – Google Translate, DeepL</li>
+                <li>Chatbots & Virtual Assistants – ChatGPT, Siri, Alexa</li>
+            </ul>
+            <p><strong>Applications:</strong> Customer support, language translation, content generation.</p>
+        </div>
+
+        <div class="topic-card">
+            <h3>Computer Vision</h3>
+            <p>
+                Computer Vision enables machines to see, process, and interpret visual data.
+            </p>
+            <ul>
+                <li>Object Detection – Identifying objects in images/videos</li>
+                <li>Facial Recognition – Security & authentication</li>
+                <li>Medical Imaging – Detect diseases from X-rays & scans</li>
+            </ul>
+            <p><strong>Applications:</strong> Surveillance, autonomous vehicles, healthcare diagnostics.</p>
+        </div>
+
+        <div class="topic-card">
+            <h3>Robotics & Automation</h3>
+            <p>
+                Robotics integrates AI to perform automated tasks efficiently and intelligently.
+            </p>
+            <ul>
+                <li>Industrial Robots – Manufacturing automation</li>
+                <li>Service Robots – Healthcare, delivery, hospitality</li>
+                <li>Autonomous Drones – Surveillance, delivery, agriculture</li>
+            </ul>
+            <p><strong>Applications:</strong> Industry, healthcare, logistics, agriculture.</p>
+        </div>
+
+        <div class="topic-card">
+            <h3>AI Ethics & Responsible AI</h3>
+            <p>
+                Responsible AI focuses on ethical development, fairness, and transparency.
+            </p>
+            <ul>
+                <li>Bias Mitigation – Ensure fairness in AI decisions</li>
+                <li>Data Privacy – Protect user data and comply with laws</li>
+                <li>Explainable AI – Make AI decisions understandable</li>
+            </ul>
+            <p><strong>Applications:</strong> Safe AI deployment, trustworthy AI systems, societal impact analysis.</p>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>© 2025 Ai Studies. All rights reserved.</p>
+        <p>Designed with ❤️ for developers and learners</p>
+    </div>
+</body>
+
+</html>
