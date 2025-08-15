@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>AiThioria</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #011216, #051b22, #41697a);
+
+        }
+
+        /* === Global Animations === */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* === Navbar Styles (Responsive) === */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background-color: rgb(255, 255, 255);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            height: 60px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        #Logo {
+            font-family: 'Agency FB';
+            font-weight: bold;
+        }
+
+        .h1 {
+            color: #000000;
+            font-size: xx-large;
+            font-family: 'Agency FB';
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled .h1 {
+            font-size: x-large;
+        }
+
+        #ul1 {
+            display: flex;
+            gap: 20px;
+            width: 800px;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .li1 {
+            text-align: center;
+            /* border: 2px solid red; */
+            padding-top: 3px;
+            padding-bottom: 3px;
+            width: 200px;
+            border-radius: 15px;
+            gap: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .li3 {
+            text-align: center;
+            /* border: 2px solid red; */
+            padding-top: 5px;
+            padding-left: 9px;
+            padding-right: 9px;
+            padding-bottom: 5px;
+            width: 230px;
+            border-radius: 15px;
+            background-color: #031c1d;
+            gap: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .a2 {
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            font-family: 'Agency FB';
+            font-size: x-large;
+        }
+
+        .a1 {
+            text-decoration: none;
+            color: #0b2a2c;
+            font-family: 'Agency FB';
+            font-size: x-large;
+        }
+
+        .li3:hover {
+            background-color: #ffffff;
+        }
+
+        .li1:hover {
+            background-color: #031c1d;
+        }
+
+        .a1:hover {
+            color: #ffffff;
+        }
+
+        .a2:hover {
+            color: #031c1d;
+        }
+
+        .a1::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #37667a;
+            transition: width 0.3s ease;
+        }
+
+        .a2::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #37667a;
+            transition: width 0.3s ease;
+        }
+
+        .a1:hover::after {
+            width: 100%;
+        }
+
+        .a2:hover::after {
+            width: 100%;
+        }
+
+        /* Hamburger Menu (Mobile) */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #000;
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile Menu Styles */
+        @media (max-width: 992px) {
+            #ul1 {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            #ul1.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        /* === Hero Section (Responsive) === */
+        .text-bg {
+            background-image: url(1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 40px;
+            height: auto;
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .text-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+        #h2 {
+            font-size: 3.5rem;
+            font-family: 'Agency FB';
+            margin: 0;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-out both;
+        }
+
+        #p1 {
+            font-family: 'Agency FB';
+            font-size: 1rem;
+            margin: 20px 0;
+            padding: 0 20px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+        #btn1 {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        #b1,
+        #b2 {
+            height: 40px;
+            font-family: 'Agency FB';
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 150px;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #b1 {
+            background-color: white;
+        }
+
+        #b2 {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid white;
+        }
+
+        #b1:hover,
+        #b2:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #b1:active,
+        #b2:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #b1::after,
+        #b2::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.1) 50%);
+            background-size: 300% 300%;
+            background-position: 100% 100%;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        #b1:hover::after,
+        #b2:hover::after {
+            background-position: 0% 0%;
+        }
+
+        #btna,
+        #btnaa {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            #h2 {
+                font-size: 2.5rem;
+                margin-top: 80px;
+            }
+
+            #btn1 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #b1,
+            #b2 {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #h2 {
+                font-size: 2rem;
+            }
+
+            #p1 {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* === Products Section (Responsive) === */
+        #products {
+            padding: 40px 20px;
+            margin-top: 70px;
+            text-align: center;
+            font-family: 'Agency FB';
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #0F2027;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            animation: fadeIn 1s ease-out both;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+            font-size: 1.2rem;
+            animation: fadeIn 1s ease-out 0.2s both;
+        }
+
+        #p2 {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 15px;
+            color: #b9f7f7;
+            animation: fadeIn 1s ease-out 0.4s both;
+        }
+
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 0 15px;
+        }
+
+        .product-card {
+            width: 100%;
+            max-width: 540px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            background: white;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        .product-card:nth-child(1) {
+            animation-delay: 0.6s;
+        }
+
+        .product-card:nth-child(2) {
+            animation-delay: 0.7s;
+        }
+
+        .product-card:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+
+        .product-card:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        .product-card:nth-child(5) {
+            animation-delay: 1.0s;
+        }
+
+        .product-card:nth-child(6) {
+            animation-delay: 1.1s;
+        }
+
+        .product-card:nth-child(7) {
+            animation-delay: 1.2s;
+        }
+
+        .product-card:nth-child(8) {
+            animation-delay: 1.3s;
+        }
+
+        .product-card:nth-child(9) {
+            animation-delay: 1.4s;
+        }
+
+        .product-card:nth-child(10) {
+            animation-delay: 1.5s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card .card-img-container {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-card .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .product-card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        .product-card .card-body {
+            padding: 25px;
+        }
+
+        .product-card .card-title {
+            color: #172931;
+            font-size: 27px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .product-card:hover .card-title {
+            color: #37667a;
+        }
+
+        .product-card .card-text {
+            color: #2c4f5e;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #pro1 {
+            justify-content: space-evenly;
+        }
+
+        .price1 {
+            color: #0F2027;
+            border-radius: 15px;
+            text-decoration: none;
+            padding: 2px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+            width: 300px;
+            background-color: #fdfdfd;
+        }
+
+        .aa1 {
+            color: #041720;
+            font-size: x-large;
+            text-decoration: none;
+        }
+
+        .price1:hover {
+            background-color: #011216;
+            animation: pulse 1s infinite;
+        }
+
+        .aa1:hover {
+            color: #ffffff;
+        }
+
+        /* .sp1 {
+            color: #041720;
+            margin-left: 290px;
+            font-family: 'Agency FB';
+            transition: color 0.3s ease;
+            font-size: 20px;
+        } */
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .product-card {
+                width: calc(50% - 15px);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .products-container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+        /* === About Section (Responsive) === */
+        #About {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            color: white;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 40px;
+        }
+
+        #img1 {
+            max-width: 100%;
+            height: auto;
+            border-radius: 40px;
+            margin: 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease;
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInFromLeft 0.8s ease-out forwards;
+        }
+
+        #img1:hover {
+            transform: scale(1.02) rotate(-1deg);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        #h5 {
+            color: #0F2027;
+            font-family: 'Agency FB';
+            color: white;
+            text-align: center;
+            margin: 0 0 20px 0;
+            font-size: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease-out 0.3s forwards;
+        }
+
+        #p3 {
+            max-width: 100%;
+            font-family: 'Agency FB';
+            color: #2c4f5e;
+            text-align: justify;
+            margin: 0;
+            color: white;
+            padding: 0 20px;
+            line-height: 1.8;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease-out 0.5s forwards;
+        }
+
+        .about-content {
+            max-width: 600px;
+            padding: 0 20px;
+            opacity: 0;
+            transform: translateX(50px);
+            animation: slideInFromRight 0.8s ease-out 0.2s forwards;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            #About {
+                padding: 60px 40px;
+            }
+
+            #img1 {
+                max-width: 500px;
+            }
+
+            .about-content {
+                flex: 1;
+                min-width: 400px;
+            }
+
+            #h5 {
+                text-align: left;
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            #About {
+                padding: 80px;
+                justify-content: space-between;
+            }
+        }
+
+        /* === Blog Section (Responsive) === */
+        #Blog {
+            padding: 40px 20px;
+            font-family: 'Agency FB';
+        }
+
+        #h6 {
+            color: #2c4f5e;
+            text-align: center;
+            margin-bottom: 10px;
+            color: white;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out both;
+        }
+
+        #h7 {
+            color: #0F2027;
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        #blog {
+            display: flex;
+            color: white;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .blog-post {
+            max-width: 100%;
+            color: white;
+            width: 100%;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .blog-post:nth-child(1) {
+            animation-delay: 0.4s;
+        }
+
+        .blog-post:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        #img22 {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        #img22:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        #img2 {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.5s ease;
+        }
+
+        #img22:hover #img2 {
+            transform: scale(1.1);
+        }
+
+        #h8 {
+            width: 100%;
+            text-align: center;
+            color: #b9f7f7;
+            margin: 15px 0 10px 0;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .blog-post:hover #h8 {
+            color: #ffffff;
+        }
+
+        #p4 {
+            width: 100%;
+            text-align: justify;
+            color: white;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .blog-date {
+            color: #b9f7f7;
+            display: block;
+            margin-top: 10px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .blog-post:hover .blog-date {
+            color: #ffffff;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .blog-post {
+                width: calc(50% - 20px);
+                max-width: 450px;
+            }
+
+            #img22 {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (min-width: 992px) {
+            #blog {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .blog-post {
+                width: calc(50% - 20px);
+            }
+        }
+
+        /* AI Study's */
+        #h12 {
+            text-align: center;
+            color: white;
+            font-family: 'Agency FB';
+        }
+
+        .main-section {
+            display: flex;
+            flex-wrap: wrap;
+            font-family: 'Agency FB';
+            padding: 110px 30px 50px;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .text-content {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .text-content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #b9f7f7;
+        }
+
+        .text-content h3 {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #b9f7f7;
+        }
+
+        .text-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+
+        .examples {
+            margin-top: 20px;
+        }
+
+        .examples ul {
+            list-style: none;
+        }
+
+        .examples li {
+            padding: 10px 0;
+            color: white;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .examples img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .image-content {
+            flex: 1;
+            min-width: 260px;
+            text-align: center;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* === Contact Section (Responsive) === */
+        #Contact {
+            padding: 40px 20px;
+            font-family: 'Agency FB';
+        }
+
+        #h9,
+        #h10,
+        #h11 {
+            color: white;
+            text-align: center;
+        }
+
+        #h9 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out both;
+        }
+
+        #h10 {
+            color: #b9f7f7;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.2s both;
+        }
+
+        #h11 {
+            color: #d9e5eb;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.4s both;
+        }
+
+        #cont {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out 0.6s both;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .name-fields {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .name-fields>div {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-family: 'Agency FB';
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #091e27;
+            box-shadow: 0 0 0 3px rgba(55, 102, 122, 0.2);
+        }
+
+        .form-group input:focus+label,
+        .form-group textarea:focus+label {
+            color: #092633;
+        }
+
+        .form-group textarea {
+            height: 180px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #0F2027;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Agency FB';
+            font-size: 16px;
+            transition: all 0.3s ease;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn:hover {
+            background-color: #1a3a47;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .submit-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.1) 50%);
+            background-size: 300% 300%;
+            background-position: 100% 100%;
+            transition: all 0.3s ease;
+            z-index: 0;
+        }
+
+        .submit-btn:hover::after {
+            background-position: 0% 0%;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            #cont {
+                padding: 20px 10px;
+            }
+
+            .name-fields>div {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #Contact {
+                padding: 30px 10px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 10px;
+            }
+        }
+
+        /* === Footer === */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0F2027;
+            font-family: 'Agency FB';
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .ul2 {
+            list-style: none;
+            text-align: left;
+            text-align: justify;
+            width: 200px;
+            padding: 5px;
+        }
+
+        .ul13 {
+            list-style: none;
+            width: 200px;
+            padding: 5px;
+        }
+
+        .li2 {
+            text-align: left;
+            margin-left: 60px;
+        }
+
+        .aaa1 {
+            text-decoration: none;
+            color: white;
+        }
+
+        .aaa1:hover {
+            color: #b9f7f7;
+        }
+
+        /* === Scroll to Top Button === */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 5px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #37667a;
+            color: white;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .scroll-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #0F2027;
+            transform: translateY(-5px);
+        }
+
+        .btn {
+            width: 200px;
+            height: 2.3em;
+            background: white;
+            color: #031c1d;
+            border: none;
+            border-radius: 0.625em;
+            font-family: 'Agency FB';
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            color: white;
+        }
+
+        .btn:after {
+            content: "";
+            background: #031c1d;
+            position: absolute;
+            z-index: -1;
+            left: -20%;
+            right: -20%;
+            top: 0;
+            bottom: 0;
+            transform: skewX(-45deg) scale(0, 1);
+            transition: all 0.5s;
+        }
+
+        .btn:hover:after {
+            transform: skewX(-45deg) scale(1, 1);
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #101820;
+            color: #fff;
+        }
+
+        /* Chatbot Icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #101820;
+            color: #b9f7f7;
+            padding: 15px;
+            font-size: 22px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Chatbot Container */
+        #chatbot-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            background: #101820;
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        #chatbot-header {
+            background: #b9f7f7;
+            color: #101820;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #chatbot-messages {
+            height: 250px;
+            padding: 10px;
+            overflow-y: auto;
+            font-size: 14px;
+            background-color: #181818;
+        }
+
+        #chatbot-input {
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            width: 100%;
+            background: #181818;
+            color: white;
+            outline: none;
+        }
+
+        #chatbot-messages div {
+            margin-bottom: 10px;
+        }
+
+        #chatbot-messages strong {
+            color: #b9f7f7;
+        }
+
+
+
+
+
+        /* Search Bar */
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 0 20px;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 50px;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #searchInput:focus {
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 15px rgba(55, 102, 122, 0.5);
+        }
+
+        #searchInput::placeholder {
+            color: rgba(207, 220, 229, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- === Scroll to Top Button ===
+    <div class="scroll-to-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </div> -->
+
+    <!-- === Responsive Navbar === -->
+    <nav>
+        <div id="Logo" style="display: flex; gap: 0px;">
+            <!-- <h1 style="color: #183642;">AI <h1 style="margin-left: 7px; color: #537888;">Thioria</h1>
+            </h1> -->
+            <!-- From Uiverse.io by CristianMontoya98 -->
+            <button class="btn"> Ai Thioria
+            </button>
+
+
+
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul id="ul1">
+            <li class="li1"><a href="#Home" class="a1">Home</a></li>
+            <li class="li1"><a href="products.html" class="a1">Products</a></li>
+            <li class="li1"><a href="#About" class="a1">About Us</a></li>
+            <li class="li1"><a href="Blog.html" class="a1">Blog</a></li>
+            <li class="li1"><a href="Ai Studys.html" class="a1">Ai Study's</a></li>
+            <li class="li1"><a href="#Contact" class="a1">Contact</a></li>
+            <li class="li3"><a href="Add to cart.html" class="a2">Add to Cart</a></li>
+        </ul>
+    </nav>
+    <!-- Hero Section HTML -->
+    <div id="Home" class="text-bg">
+        <h1 id="h2" class="fade-in">Shop With Us</h1>
+        <p id="p1" class="fade-in delay">
+            <span style="font-weight: bold;">Explore the Future with AiThioria</span><br>
+            Your one-stop shop for top AI books and tools. Learn, grow, and stay ahead in the world of Artificial
+            Intelligence — all in one place.
+        </p>
+        <div id="btn1" class="fade-in delay2">
+            <button id="b1"><a href="products.html" id="btna">Shop Now</a></button>
+            <button id="b2"><a href="Sign in.html" id="btnaa">Sign Up</a></button>
+        </div>
+    </div>
+    <!-- About Section HTML -->
+    <div id="About">
+        <img id="img1" class="fade-in"
+            src="https://img.freepik.com/free-vector/ai-technology-microchip-background-vector-digital-transformation-concept_53876-112222.jpg?semt=ais_hybrid&w=740"
+            alt="AI Technology">
+
+        <div class="about-content">
+            <h1 id="h5" class="fade-in">About US</h1>
+            <p id="p3" class="fade-in">At <span style="font-weight: bold;">AiThioria</span>, we believe that the future
+                belongs to those who understand and embrace Artificial Intelligence. Founded with a vision to make AI
+                learning accessible, engaging, and reliable, AiThioria is your one-stop platform for discovering the
+                best
+                AI books, learning resources, and tools from around the world. Whether you are a curious beginner, a
+                university student, or an experienced professional, our handpicked collection is designed to support
+                your journey at every level.<br><br>We are more than just an online bookstore — we are a passionate
+                community dedicated to fostering AI knowledge and innovation. With a deep commitment to quality and
+                relevance, we continuously update our catalog with the latest titles, research guides, and foundational
+                works in AI, machine learning, deep learning, robotics, and more. Our goal is to empower minds, spark
+                creativity, and help shape the future of AI through education.<br><br>Join us on this journey to learn,
+                grow, and unlock the true potential of artificial intelligence — one page at a time.</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Contact Section HTML -->
+    <div id="Contact">
+        <h6 id="h9">Contact Form</h6>
+        <h1 id="h10">Get In Touch</h1>
+
+        <div id="cont">
+            <h4 id="h11">Contact Form</h4>
+
+            <form class="contact-form">
+                <div class="name-fields">
+                    <div class="form-group">
+                        <label for="a">Name</label>
+                        <input type="text" id="a">
+                    </div>
+                    <div class="form-group">
+                        <label for="b">Last Name</label>
+                        <input type="text" id="b">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="c">Email</label>
+                    <input type="email" id="c">
+                </div>
+
+                <div class="form-group">
+                    <label for="d">Subject</label>
+                    <input type="text" id="d">
+                </div>
+
+                <div class="form-group">
+                    <label for="e">Message</label>
+                    <textarea id="e" placeholder="Write your notes or questions here..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div style="display: flex; justify-content: space-evenly;">
+            <ul class="ul2">
+                <li style="text-align: center; font-size: large; color: #b9f7f7">About Us</li><br>
+                <p>AI books, learning resources, and tools from around the world. Whether you are a curious beginner, a
+                    university student, or an experienced professional. </p>
+            </ul>
+
+            <ul class="ul13">
+                <li style="text-align: center; font-size: large; color: #b9f7f7">Quick Links</li><br>
+                <li class="li2"><a class="aaa1" href="#Home">Home</a></li>
+                <li class="li2"><a class="aaa1" href="#products">Products</a></li>
+                <li class="li2"><a class="aaa1" href="#About">About Us</a></li>
+                <li class="li2"><a class="aaa1" href="#Blog">Blog</a></li>
+                <li class="li2"><a class="aaa1" href="#Ai Study's">Ai Study's</a></li>
+                <li class="li2"><a class="aaa1" href="#Contact">Contact</a></li>
+            </ul>
+            <ul class="ul13">
+                <li style="text-align: center; font-size: large; color: #b9f7f7">Follow Us</li><br>
+                <li class="li2">
+                    <a class="aaa1" href="https://web.facebook.com/profile.php?id=61570182430210">
+                        <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" width="20"
+                            style="margin-right: 8px; vertical-align: middle;">
+                        Facebook
+                    </a>
+                </li>
+                <li class="li2">
+                    <a class="aaa1" href="https://www.instagram.com/muhammedsufianawan1/">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="20"
+                            style="margin-right: 8px; vertical-align: middle;">
+                        Instagram
+                    </a>
+                </li>
+                <li class="li2">
+                    <a class="aaa1" href="#">
+                        <img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter" width="20"
+                            style="margin-right: 8px; vertical-align: middle;">
+                        Twitter
+                    </a>
+                </li>
+                <li class="li2">
+                    <a class="aaa1" href="#">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="20"
+                            style="margin-right: 8px; vertical-align: middle;">
+                        LinkedIn
+                    </a>
+                </li>
+                <li class="li2">
+                    <a class="aaa1" href="https://mail.google.com/mail/u/0/#inbox">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="20"
+                            style="margin-right: 8px; vertical-align: middle;">
+                        Email
+                    </a>
+                </li>
+                <li class="li2">
+                    <a class="aaa1" href="https://github.com/SufianKhan-Code">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" width="20"
+                            style="margin-right: 8px; vertical-align: middle;">
+                        GitHub
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <br><br>
+        <div>
+            Copyright ©2025 All
+            rights reserved | This is made with &#128420; by Muhammed Sufiyan
+        </div>
+    </footer>
+
+    <!-- Chatbot Icon 
+            -->
+    <div id="chatbot-icon" onclick="toggleChatbot()">🤖</div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-container">
+        <div id="chatbot-header">AiThoria Assistant 🤖</div>
+        <div id="chatbot-messages"></div>
+        <input type="text" id="chatbot-input" placeholder="Ask anything..." onkeydown="handleInput(event)" />
+    </div>
+
+    <!-- Chatbot Script -->
+    <script>
+        const chatbotData = {
+            "hello": "Hi there! 👋 How can I assist you about AiThoria?",
+            "hi": "Hello! 😊 How can I help you today on AiThoria?",
+            "hey": "Hey! Need help finding AI books?",
+            "what is aithioria": "AiThoria is your hub for top-rated AI books, curated for learners and professionals.",
+            "aithoria": "AiThoria is an online store for AI-related books and resources.",
+            "products": "We offer books like 'You Don’t Know JS', 'AI Superpowers', 'Life 3.0' and more. 📚",
+            "books": "Explore our product section for amazing books on AI, ML, Python, and Robotics!",
+            "ai books": "We specialize in AI and tech-related books for all levels.",
+            "best sellers": "Our best-selling books include 'You Don’t Know JS' and 'AI Superpowers'.",
+            "recommend book": "We recommend starting with 'Artificial Intelligence: A Modern Approach'.",
+            "top books": "Top picks include 'AI Superpowers', 'You Don’t Know JS', and 'Python Crash Course'.",
+            "price": "Prices vary by book — check the product section for details!",
+            "discount": "We offer occasional discounts — subscribe to our newsletter to stay updated.",
+            "shipping": "We deliver books across Pakistan. More regions coming soon!",
+            "delivery": "Delivery usually takes 3–5 business days after order confirmation.",
+            "how to order": "Simply go to the product page, click 'Add to Cart', and proceed to checkout.",
+            "payment": "We support Cash on Delivery and EasyPaisa.",
+            "cod": "Yes! Cash on Delivery is available.",
+            "return policy": "We accept returns within 7 days if the book is damaged or wrong.",
+            "about": "AiThoria’s mission is to bring the best AI books to your fingertips.",
+            "team": "We are a small team of AI enthusiasts and developers who love sharing knowledge!",
+            "blog": "Visit our blog section for the latest updates and articles on AI.",
+            "latest blog": "Our latest blog covers the future of Artificial Intelligence in education.",
+            "ai studies": "AI Studies includes tutorials, beginner guides, and career tips in AI.",
+            "learning": "Check our 'AI Studies' page for how to start learning AI.",
+            "how to learn ai": "We suggest starting with 'AI For Beginners' in our AI Studies section.",
+            "machine learning": "We have ML books and guides for beginners and intermediate learners.",
+            "python": "Several books in our store use Python as the main language — great for learning AI!",
+            "javascript": "We have advanced JavaScript books like 'You Don’t Know JS'.",
+            "faq": "You can ask me anything, or visit our FAQ section (coming soon).",
+            "contact": "Use the contact form at the bottom of the site or message us anytime!",
+            "support": "We’re here to help! Contact us via the contact page for any support issues.",
+            "email": "You can email us using the contact form on the website.",
+            "social": "Follow us on Instagram and LinkedIn (links in footer).",
+            "feedback": "We'd love your feedback! Send us a message on the Contact page.",
+            "career": "We're not hiring yet, but stay tuned for updates!",
+            "suggestion": "Feel free to suggest new books you'd like to see!",
+            "newsletter": "Subscribe to our newsletter to get updates and offers.",
+            "login": "Currently, our site doesn’t require login — just explore and shop freely!",
+            "register": "No registration required for browsing. Just select and buy!",
+            "mobile": "Our website is fully responsive and works great on mobile! 📱",
+            "secure": "Yes, your data is safe. We use SSL encryption for all transactions.",
+            "bye": "Goodbye! 😊 Let me know if you have any other questions.",
+            "thank you": "You're welcome! Happy to help. 💬",
+            "thanks": "Anytime! 😊 Keep exploring AiThoria.",
+            "who made this": "AiThoria was created by passionate AI learners and developers.",
+            "developer": "This site was built by Sufian — a student and future AI engineer. 🚀",
+            "ai for beginners": "Check out our AI Studies section – it's beginner friendly and packed with learning material!",
+            "deep learning": "We have books and blogs that cover Deep Learning fundamentals and applications.",
+            "reinforcement learning": "Reinforcement Learning is a type of AI learning – see our AI Studies for more!",
+            "neural networks": "Neural networks power many AI systems — we have resources explaining how they work.",
+            "ai vs ml": "AI is the broader concept, while ML is a subset that involves data-driven learning.",
+            "what is machine learning": "Machine learning is training systems to learn from data. See our ML books!",
+            "ml books": "We offer books that explain Machine Learning from scratch to expert level.",
+            "how to start ai": "Start with Python, basic math, and our recommended AI books for beginners.",
+            "python books": "Try 'Python Crash Course' or 'Automate the Boring Stuff with Python'.",
+            "free resources": "Our blog and AI Studies offer free articles and learning tips!",
+            "ai in pakistan": "AI is growing fast in Pakistan! Stay ahead with the right books and courses.",
+            "ai career": "We have guides on starting a career in AI under the AI Studies section.",
+            "ai roadmap": "Explore our AI Studies section to see learning paths and roadmaps.",
+            "can i learn ai": "Yes! Anyone can learn AI — start with the basics and stay consistent.",
+            "is ai hard": "AI can be challenging but fun. Start small and grow steadily.",
+            "ai tools": "We’re working on a tools section. For now, check the blog for tool lists.",
+            "popular books": "Popular picks: 'You Don’t Know JS', 'AI Superpowers', and 'Life 3.0'.",
+            "buy books": "Go to the product page and click 'Add to Cart'. It's easy!",
+            "order book": "Just click on a book, add to cart, and proceed to checkout!",
+            "checkout": "Go to your cart and complete the form to place your order.",
+            "how to pay": "We currently accept Cash on Delivery (COD) and EasyPaisa.",
+            "easypaisa": "Yes, you can pay using EasyPaisa — we'll send the number after checkout.",
+            "jazzcash": "JazzCash option is coming soon! For now, use COD or EasyPaisa.",
+            "home": "Click the 'Home' button in the navbar to return to the main page.",
+            "cart": "Click the cart icon on the top right to view your selected products.",
+            "wishlist": "We are planning to add a wishlist feature in the next update!",
+            "track order": "Tracking is available via email. A feature will soon launch on-site!",
+            "ai blog": "Visit the blog page to read AI tips, updates, and trends.",
+            "ai future": "The future of AI is bright. Our blog explores where it's heading.",
+            "ai ethics": "Ethics in AI is a hot topic — check out our blog on 'Responsible AI'.",
+            "ai danger": "AI can be powerful — but it needs to be used ethically. Read our blogs for more.",
+            "is ai safe": "Used correctly, AI is safe. That's why learning the right way matters!",
+            "ai companies": "Companies like Google, OpenAI, and Tesla are leading in AI development.",
+            "elon musk": "Elon Musk is known for his warnings and ventures in AI like xAI and Tesla AI.",
+            "openai": "OpenAI is the creator of ChatGPT — a leading AI research company.",
+            "chatgpt": "ChatGPT is an AI language model created by OpenAI — like me! 😊",
+            "ai chatbot": "Yes! You're talking to one now. Try asking about our books.",
+            "can ai think": "AI simulates thinking but doesn’t truly understand like humans.",
+            "ai jokes": "Why did the AI go to therapy? Because it had too many deep learning issues! 😄",
+            "tell me a joke": "Sure! What do you call an AI with a sense of humor? A laughing bot! 🤖😂",
+            "hello bot": "Hi human! 👋 How can I help you explore AiThoria?",
+            "do you sell pdf": "No, we sell printed physical books only for now.",
+            "digital books": "Currently we only offer physical books, not eBooks or PDFs.",
+            "student discount": "We’re planning student discounts soon! Stay subscribed.",
+            "is this trusted": "Yes! We’re a growing local business with customer-first values.",
+            "real books?": "Yes, we ship real, physical books to your doorstep.",
+            "how long delivery": "Delivery takes 3–5 working days depending on your city.",
+            "delivery cities": "We deliver in Karachi, Lahore, Islamabad and more cities across Pakistan.",
+            "working hours": "We operate Monday to Saturday, 10AM–7PM (PKT).",
+            "holiday": "We are closed on Sundays and national holidays.",
+            "events": "We’ll soon launch giveaways and book webinars — stay tuned!",
+            "how many books": "We currently stock over 30+ top-rated AI & tech books.",
+            "more books": "More books are coming every week — follow us for updates!",
+            "can i return": "Yes! If the book is damaged or wrong, we'll replace it within 7 days.",
+            "cancel order": "You can cancel your order before it’s shipped. Message us ASAP.",
+            "i have issue": "Sorry to hear that! Please contact us using the form.",
+            "book damaged": "We’ll replace it! Just contact us with your order ID.",
+            "wrong book": "Oops! Message us with your order ID and we’ll fix it.",
+            "fast shipping": "We offer express delivery in Karachi and Lahore.",
+            "aithoria logo": "The logo represents future + learning — just like our mission.",
+            "who are you": "I’m AiBot 🤖 — your AiThoria assistant here to guide you!",
+            "can you help": "Yes! Ask me anything about books, orders, or AI topics.",
+            "get started": "To get started, browse products or visit our AI Studies section.",
+            "how this works": "Just type your question — I’ll answer instantly!",
+            "i want help": "Sure! Tell me what you need help with — products, learning, or contact.",
+            "ask question": "Go ahead and ask your question — I’m here to help!",
+            "how to talk": "Just type like you're chatting with a friend. 😊",
+            "can i call": "We don’t have phone support yet, but you can message us anytime!",
+            "contact form": "You'll find the contact form at the bottom of the page.",
+            "message us": "Click 'Contact' in the navbar and send us your message.",
+            "do you reply": "Yes, we respond within 12–24 hours. Usually sooner!",
+            "who made aithoria": "AiThoria was created by Sufian — a passionate AI learner and developer.",
+            "portfolio": "You can view Sufian’s portfolio site to see more of his work!",
+            "built with": "AiThoria is built with HTML, CSS, JS & Bootstrap for a responsive experience.",
+            "responsive": "Yes! The entire site works on mobiles, tablets, and desktops. 📱💻",
+            "can i trust": "Yes! We’re transparent, beginner-friendly, and focused on quality.",
+            "new arrival": "We update our catalog every week — check back often!",
+            "sale": "No current sale, but offers are coming soon!",
+            "language": "Most of our books are in English.",
+            "urdu books": "Currently, we don’t have Urdu books — but maybe in the future!",
+            "how to order a book": "Just click on a product and hit the 'Add to Cart' or 'Buy Now' button!",
+            "what's the latest book": "Check the top section of our Products page — we regularly update it with the latest releases.",
+            "can i contact you": "Yes! Use the contact form at the bottom or in the Contact section.",
+            "who created aithioria": "AiThoria is built by passionate AI learners and developers for future innovators!",
+            "how to learn ai": "Visit our AI Studies section — it's full of curated resources for all levels.",
+            "top selling books": "Some of our bestsellers include 'AI Superpowers', 'You Don't Know JS', and 'Python Machine Learning'.",
+            "do you ship internationally": "Currently, we are shipping locally — global delivery is coming soon!",
+            "is there a blog": "Yes! Our Blog section shares AI news, articles, and trends.",
+            "how to reach you": "You can message us via the Contact page on our site.",
+            "do you have javascript books": "Absolutely! We recommend the 'You Don’t Know JS' series and more in our product section.",
+            "ai book for beginners": "'Artificial Intelligence: A Guide for Thinking Humans' is a great start!",
+            "machine learning books": "Check our ML category for top picks like 'Hands-On ML with Scikit-Learn and TensorFlow'.",
+            "deep learning books": "'Deep Learning' by Ian Goodfellow is a must-have!",
+            "how to chat with bot": "You're already chatting! 😊 Ask me anything about AiThoria.",
+            "recommend a book": "Try 'Life 3.0' by Max Tegmark — it’s insightful and easy to read!",
+            "how can i study ai": "Start with our AI Studies — you'll find paths for beginners, intermediate, and pros.",
+            "do you offer discounts": "Stay tuned to our homepage — we announce special deals there!",
+            "is your website responsive": "Yes! AiThoria is mobile-friendly and works on all screen sizes.",
+            "how can i follow updates": "Check our Blog or follow us on social media (coming soon!).",
+            "are books updated": "We regularly add the newest and trending books in the field.",
+            "who is this chatbot": "I'm the AiThoria Assistant — here to help you with your shopping and learning! 🤖",
+            "can you recommend a product": "Sure! 'AI Superpowers' is a favorite among readers.",
+            "do you accept online payments": "We are adding more payment options soon. Stay tuned!",
+            "how to leave a message": "Go to the Contact section and fill out the form!",
+            "what does ai stand for": "AI stands for Artificial Intelligence 🤖",
+            "what is machine learning": "Machine learning is a subset of AI that allows systems to learn from data.",
+            "can you teach ai": "I can help guide you to the right resources — check the AI Studies section!",
+            "do you offer ebooks": "Currently we focus on physical books. Ebooks coming soon!",
+            "how to add to cart": "Click on the product you like and then 'Add to Cart'.",
+            "where is your about page": "Scroll to the About section or click 'About' in the navigation bar.",
+            "can i get updates": "Sure! Soon we’ll add newsletter signup for AI updates.",
+            "who are the authors": "Each product lists the book’s author. Tap to view more details.",
+            "do you have a search bar": "Not yet, but we’re adding smart search functionality soon!",
+            "where is blog located": "Click 'Blog' on the navbar to view our latest articles.",
+            "is this secure": "Yes, we aim to provide a safe, user-friendly experience.",
+            "do you support ai education": "Absolutely! That’s the mission behind AiThoria.",
+            "what is your mission": "To deliver the best AI learning materials to future innovators.",
+            "can i suggest a book": "Yes! Use the contact form and we’d love to hear your suggestions.",
+            "do you have support": "I’m your friendly assistant! For more help, visit the Contact section.",
+            "any offers today": "Special deals are posted on the homepage. Keep an eye out!",
+            "can i bookmark this site": "Of course! Add us to your bookmarks for easy access.",
+            "can i cancel an order": "Cancellation options coming soon. Contact us directly for help now.",
+            "what are ai studies": "It's a section that guides you on how to learn AI from scratch!",
+            "how long does delivery take": "Shipping details are shown during checkout.",
+            "can i track my order": "Tracking features coming soon. Contact us for updates on your order.",
+            "do you have tutorials": "Check the AI Studies page — we’re expanding tutorial content!",
+            "where to start learning ai": "Begin with our curated AI Studies section.",
+            "do you have youtube channel": "Coming soon! We'll keep you updated through the blog.",
+            "can you explain deep learning": "It’s a type of ML using neural networks to simulate the human brain.",
+            "can i trust this site": "Yes! We’re a growing platform focused on quality AI books and learning.",
+            "any ai news": "Visit the blog — we share the latest in AI trends and updates!",
+            "what is natural language processing": "It’s a field of AI that helps computers understand human language.",
+            "what is computer vision": "AI that helps computers interpret images and video — like human sight.",
+            "can i get job info": "Our blog may share career tips soon. Keep checking!",
+            "do you have ai quizzes": "We’re working on interactive learning tools. Stay tuned!",
+            "who is the founder": "AiThoria was created by passionate AI learners and web developers.",
+            "can i suggest a feature": "Of course! Use the Contact form — we welcome feedback.",
+            "what makes you different": "We combine book shopping with AI education — all in one place.",
+            "are the books physical": "Yes — we currently offer physical copies of AI books.",
+            "do you sell only ai books": "Yes, AiThoria specializes in AI and tech-focused books only.",
+            "can i leave a review": "Soon we’ll add a review section for each book!",
+            "do you have beginner guides": "Yes! Check the AI Studies section for beginner-friendly content.",
+            "can you show me books": "Go to the Products section to explore all our books.",
+            "can i learn javascript here": "Yes, we have books focused on JavaScript and web development.",
+            "how to become an ai engineer": "Check our AI Studies for a roadmap to start your journey.",
+            "do you recommend any authors": "Ian Goodfellow, Max Tegmark, and Stuart Russell are great starts!",
+            "can i talk to someone": "Use our Contact form — we’ll reply shortly!",
+            "can you help me study": "Sure! I’ll point you to resources on our site.",
+            "are books certified": "These are globally recognized books by top AI experts.",
+            "can i trust your recommendations": "Absolutely. We hand-pick each book based on quality and relevance.",
+            "do you offer internships": "Not currently, but we might in the future!",
+            "do you provide AI tools": "Right now we offer books. Tools and apps are planned for the future.",
+            "what is life 3.0": "A bestselling AI book by Max Tegmark — check it out in Products!",
+            "what is the alignment problem": "A famous book exploring AI ethics — also available in our catalog!",
+            "what is superintelligence": "It refers to AI that surpasses human intelligence — a hot topic in AI.",
+            "where can i read reviews": "We’re adding user reviews to product pages soon!",
+            "do you support students": "Yes! AiThoria was created with learners in mind.",
+            "how many books do you have": "Our collection is growing every week — check back often!",
+            "can i buy multiple books": "Yes — add as many as you want to your cart!",
+            "can i pay on delivery": "Payment on delivery options are being considered.",
+            "is this a Pakistani site": "Yes! AiThoria is proudly built in Pakistan 🇵🇰",
+            "do you deliver in Karachi": "Yes — we deliver in Karachi and major cities.",
+            "how to login": "Login features will be added soon for tracking orders and more.",
+            "can i create an account": "Soon! We’re working on user accounts.",
+            "what is python": "Python is a powerful language used heavily in AI development.",
+            "can i get recommendations": "Of course! Let me know your level and interest area.",
+            "do you update blog regularly": "Yes — we post articles and tips on AI often.",
+            "can i ask general ai questions": "Yes! I’ll try to answer or guide you to helpful resources.",
+            "can you explain ai ethics": "AI ethics focuses on making AI systems fair, safe, and aligned with human values.",
+            "are you a real person": "Nope, I’m your friendly AI assistant — always here to help!",
+            // Greetings & Casual
+            "hi": "Hey! 👋 How can I help you explore AiThoria today?",
+            "hello there": "Hello there! 😊 What would you like to know about AiThoria?",
+            "good morning": "Good morning! Ready to learn some AI magic? ☀️",
+            "good night": "Good night 🌙 Sweet dreams and smart thoughts!",
+            "how are you": "I'm doing great, thanks for asking! 🤖 How can I assist you?",
+            "what's up": "Just helping people find the best AI books! 💡",
+            "thanks": "You're very welcome! 🙏",
+            "thank you": "Glad to help! 😊",
+            "okay": "Cool! Let me know if you have more questions.",
+            "awesome": "Yay! 🎉 Let’s dive deeper if you’re curious.",
+            // About AiThoria
+            "who are you": "I'm your AiThoria Assistant 🤖, here to guide you through our AI book world!",
+            "what do you do": "I help you find AI books, learning resources, and guide you through the site. 📚",
+            "aithoria": "AiThoria is your one-stop shop for the best AI and tech books. 🚀",
+            "mission": "Our mission is to make AI education easy, accessible, and exciting. 💫",
+            "why this site": "To empower learners, developers, and enthusiasts with top AI content! 🔍",
+
+            // Product Queries
+            "show me books": "Sure! Check out the Products section for hand-picked AI books. 📖",
+            "top books": "Some popular ones are 'AI Superpowers', 'You Don’t Know JS', and 'The Alignment Problem'.",
+            "new books": "We frequently update our collection. Visit the Products page to see the latest! 🔄",
+            "price": "Prices vary per book. Head over to Products to check them out.",
+            "buy book": "To purchase a book, click on ‘View Product’ in the product list. 🛒",
+            "recommendation": "Looking to get started? I recommend 'Artificial Intelligence: A Guide for Thinking Humans'.",
+            "js books": "'You Don’t Know JS' and 'JavaScript: The Good Parts' are great reads! 💻",
+            "deep learning": "Try 'Deep Learning with Python' or 'Hands-On Machine Learning'. 🧠",
+            "ml books": "We’ve got 'Python Machine Learning' and 'Machine Learning Yearning' for you!",
+            "ai books": "Explore books like 'Life 3.0', 'Human Compatible', and more. 🤖",
+            // AI Studies
+            "learn ai": "Check out our AI Studies section for structured learning. 🎓",
+            "ai tutorials": "Our AI Studies page has curated tutorials just for you.",
+            "study ai": "Want to start studying AI? Head over to the AI Studies tab! 🧑‍🎓",
+            "resources": "We've got resources for Machine Learning, Deep Learning, Python, and more.",
+            "python ai": "Python is essential for AI! We have books & guides for it. 🐍",
+            "ml vs dl": "ML is broad, DL is a subfield with neural networks. Both are awesome! 🔬",
+            "ai career": "Curious about AI careers? Check our blog for guides and tips.",
+            "courses": "While we sell books, we also recommend top free AI courses in our blog. 🎥",
+            // Blog & Content
+            "blog": "Head over to our Blog section to find AI articles and insights. 📝",
+            "latest blog": "Check out our newest blog post in the Blog tab! 🚀",
+            "ai news": "Our blog covers the latest in AI. Give it a read! 📰",
+            "trends": "Stay ahead with trending AI topics in our blog section.",
+            "examples": "We often post real-world AI examples in our articles.",
+            "tutorials": "We’ve written tutorials for beginners in our blog area. ✍️",
+            // Contact
+            "contact": "You can reach us using the contact form at the bottom. 💬",
+            "email": "Use the contact page to send us your message — we’ll get back soon!",
+            "support": "Need help? I’m here for FAQs, or you can use the contact form.",
+            "message": "Feel free to leave us a message — we love hearing from visitors. 📨",
+            "customer care": "We’re always ready to support our AI readers. Reach out anytime!",
+            // Fun & Friendly
+            "you are cool": "Aw, thank you! 😊 You're pretty awesome too!",
+            "i love you": "❤️ I appreciate that! Let’s keep learning AI together!",
+            "tell me a joke": "Why did the AI cross the road? Because it learned it from data! 😂",
+            "are you human": "I’m 100% bot, 100% helpful! 🤖",
+            "do you sleep": "Nope, I’m always here when you need me!",
+            "talk to me": "Sure thing! Ask me anything about AiThoria or AI topics.",
+            "are you real": "As real as a bot can be! 😄",
+            "robot": "Yep, but a friendly one built to serve you better.",
+            "can i trust you": "Absolutely! I’m only here to assist with trusted info from AiThoria.",
+            // Navigation help
+            "where is products": "Just click on 'Products' in the menu. It’s right at the top!",
+            "where is blog": "You’ll find the Blog section in the main menu — go explore! 🧭",
+            "how to order": "Visit the Products page, select your book, and follow the instructions to order.",
+            "is it safe": "Yes! AiThoria is a secure website with safe browsing. 🔒",
+            "mobile friendly": "Yes, our site is 100% responsive — great on phones and tablets!",
+            "return policy": "You can find return info in our FAQs or contact us directly.",
+            // Exit
+            "bye": "Goodbye! 😊 Come back anytime to explore more.",
+            "see you": "See you soon! Don’t stop learning! 🚀",
+            "exit": "You can close this chat anytime. I’ll be here when you return!",
+        };
+
+
+        function toggleChatbot() {
+            const container = document.getElementById('chatbot-container');
+            container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
+            container.style.flexDirection = 'column';
+        }
+
+        function handleInput(event) {
+            if (event.key === 'Enter') {
+                const input = document.getElementById('chatbot-input');
+                const message = input.value.trim();
+                if (message !== "") {
+                    showMessage("You", message);
+                    respondTo(message.toLowerCase());
+                    input.value = "";
+                }
+            }
+        }
+
+        function showMessage(sender, text) {
+            const msgBox = document.getElementById('chatbot-messages');
+            msgBox.innerHTML += `<div><strong>${sender}:</strong> ${text}</div>`;
+            msgBox.scrollTop = msgBox.scrollHeight;
+        }
+
+        function respondTo(msg) {
+            let response = "I'm sorry, I didn’t understand. Try asking about our products, blog, or contact info!";
+            for (const key in chatbotData) {
+                if (msg.includes(key)) {
+                    response = chatbotData[key];
+                    break;
+                }
+            }
+            setTimeout(() => showMessage("Bot", response), 500);
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const ul = document.getElementById('ul1');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            ul.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('.a1');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                ul.classList.remove('active');
+            });
+        });
+
+        // Scroll to top button
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('active');
+            } else {
+                scrollToTopBtn.classList.remove('active');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Animate elements when they come into view
+        const animateOnScroll = function () {
+            const elements = document.querySelectorAll('.product-card, #img1, .about-content, .blog-post');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+
+                if (elementPosition < screenPosition) {
+                    element.style.animationPlayState = 'running';
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        // Run once on page load
+        animateOnScroll();
+
+        // Button hover effects
+        const buttons = document.querySelectorAll('#b1, #b2, .submit-btn');
+
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'translateY(-3px)';
+                button.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
+            });
+
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'translateY(0)';
+                button.style.boxShadow = '0 5px 10px rgba(0, 0, 0, 0.1)';
+            });
+
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'translateY(-1px)';
+            });
+
+            button.addEventListener('mouseup', () => {
+                button.style.transform = 'translateY(-3px)';
+            });
+        });
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("open");
+        }
+
+
+
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.product-card card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    card.style.display = '';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show no results message if needed
+            const noResults = document.querySelector('.no-results');
+            if (visibleCount === 0 && !noResults) {
+                const productsContainer = document.querySelector('#products');
+                const message = document.createElement('div');
+                message.className = 'no-results';
+                message.innerHTML = '<p>No books found matching your search. Try a different term.</p>';
+                productsContainer.appendChild(message);
+            } else if (visibleCount > 0 && noResults) {
+                noResults.remove();
+            }
+        });
+    </script>
+</body>
+
+</html>
