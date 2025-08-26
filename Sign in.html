@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <meta name="description"
+        content="AIThioria offers premium AI books and learning resources for all skill levels. Explore expert-curated collections, structured learning paths, and join our AI community.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="Logo.png" type="icon">
+    <link rel="shortcut icon" href="Logo.png" type="icon">
+    <!-- Apple Touch Icon (for iOS devices) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Logo.png">
+    <!-- Android/Chrome -->
+    <link rel="icon" type="icon" sizes="192x192" href="Logo.png">
+    <link rel="icon" type="icon" sizes="512x512" href="Logo.png">
+    <!-- Standard Favicon for other browsers -->
+    <link rel="icon" type="icon" sizes="32x32" href="Logo.png">
+    <link rel="icon" type="icon" sizes="16x16" href="Logo.png">
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="Logo.png">
+    <!-- Bootstrap CSS CDN with integrity hash -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome CDN with integrity hash -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Animate.css CDN with integrity hash -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon from CDN -->
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png" type="image/png">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png"
+        type="image/png">
+    <!-- Apple Touch Icon (for iOS devices) -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <!-- Android/Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <!-- Standard Favicon for other browsers -->
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/site.webmanifest">
+
+    <!-- Consolidated CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Consolidated Favicon Links -->
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png" type="image/png">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png"
+        type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="manifest" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/site.webmanifest">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Agency FB';
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Left side */
+        .left {
+            flex: 1;
+            background: url('registration img.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+        .left::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        /* Right side */
+        .right {
+            flex: 1;
+            background: linear-gradient(135deg, #011216, #051b22, #41697a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(15px);
+            width: 100%;
+            max-width: 400px;
+            color: white;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 26px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 40px 12px 12px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 15px;
+        }
+
+        .input-group input::placeholder {
+            color: #ddd;
+        }
+
+        .input-group i {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #00bcd4;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0198a4;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .form-footer a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .left {
+                height: 40%;
+            }
+
+            .right {
+                height: 60%;
+            }
+        }
+
+        #bb {
+            background: rgba(243, 247, 254, 0.9);
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            width: 120px;
+            height: 50px;
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #bb:hover {
+            background: #011216;
+            box-shadow: 0 0 0 5px rgba(6, 47, 71, 0.5);
+        }
+
+        .a {
+            color: #011216;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Agency FB';
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        #bb:hover .a {
+            color: #b9f7f7;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Back Button -->
+    <button id="bb"><a class="a" href="Index.html"><i class="fas fa-arrow-left"></i> Go Back</a></button>
+    <div class="left"></div>
+
+    <div class="right">
+        <form class="form-box" id="registrationForm">
+            <h2>Create Account</h2>
+
+            <div class="input-group">
+                <input type="text" placeholder="Full Name" required>
+            </div>
+
+            <div class="input-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+
+            <!-- Extra Detail 1 -->
+            <div class="input-group">
+                <input type="tel" placeholder="Phone Number" required>
+            </div>
+
+            <!-- Extra Detail 2 -->
+            <div class="input-group">
+                <input type="date" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+                <i class="fa-solid fa-eye" id="togglePassword"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <i class="fa-solid fa-eye" id="toggleConfirmPassword"></i>
+            </div>
+
+            <button type="submit">Register</button>
+
+            <div class="form-footer">
+                Already have an account? <a href="Login.html">Login</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Toggle Password
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+
+        togglePassword.addEventListener('click', () => {
+            const type = password.type === 'password' ? 'text' : 'password';
+            password.type = type;
+            togglePassword.classList.toggle('fa-eye-slash');
+        });
+
+        // Toggle Confirm Password
+        const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+        const confirmPassword = document.getElementById('confirmPassword');
+
+        toggleConfirmPassword.addEventListener('click', () => {
+            const type = confirmPassword.type === 'password' ? 'text' : 'password';
+            confirmPassword.type = type;
+            toggleConfirmPassword.classList.toggle('fa-eye-slash');
+        });
+
+        // Form Submit with Popup
+        const form = document.getElementById('registrationForm');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert("Your account is successfully registered!");
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>
