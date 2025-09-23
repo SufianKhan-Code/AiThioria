@@ -1,0 +1,2229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs Section</title>
+    <meta name="description"
+        content="AIThioria offers premium AI books and learning resources for all skill levels. Explore expert-curated collections, structured learning paths, and join our AI community.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="Logo.png" type="icon">
+    <link rel="shortcut icon" href="Logo.png" type="icon">
+    <!-- Apple Touch Icon (for iOS devices) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Logo.png">
+    <!-- Android/Chrome -->
+    <link rel="icon" type="icon" sizes="192x192" href="Logo.png">
+    <link rel="icon" type="icon" sizes="512x512" href="Logo.png">
+    <!-- Standard Favicon for other browsers -->
+    <link rel="icon" type="icon" sizes="32x32" href="Logo.png">
+    <link rel="icon" type="icon" sizes="16x16" href="Logo.png">
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="Logo.png">
+    <!-- Bootstrap CSS CDN with integrity hash -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome CDN with integrity hash -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Animate.css CDN with integrity hash -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon from CDN -->
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png" type="image/png">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png"
+        type="image/png">
+    <!-- Apple Touch Icon (for iOS devices) -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <!-- Android/Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <!-- Standard Favicon for other browsers -->
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/site.webmanifest">
+
+    <!-- Consolidated CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Consolidated Favicon Links -->
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png" type="image/png">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png"
+        type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="512x512"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/logo.png">
+    <link rel="manifest" href="https://cdn.jsdelivr.net/gh/SufianKhan-Code/AiThioria@main/site.webmanifest">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #011216, #051b22, #41697a);
+            color: #fff;
+            font-family: 'Agency FB';
+            min-height: 100vh;
+            padding-top: 150px;
+            position: relative;
+            overflow-x: hidden;
+            font-family: 'Agency FB';
+        }
+
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 20px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .meta i {
+            opacity: .8;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(55, 102, 122, 0.2) 0%, rgba(1, 18, 22, 0) 50%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            font-family: 'Agency FB';
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+            display: flex;
+            font-family: 'Agency FB';
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        nav.scrolled {
+            height: 60px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #183642;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo i {
+            color: #537888;
+        }
+
+        .nav-logo span {
+            color: #537888;
+            font-family: 'Agency FB';
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Agency FB';
+            color: #0b2a2c;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #031c1d;
+            color: #ffffff;
+        }
+
+        .nav-cta {
+            background-color: #031c1d;
+            color: #ffffff !important;
+            padding: 8px 20px;
+            border-radius: 8px;
+        }
+
+        .nav-cta:hover {
+            background-color: #0d4245;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #000;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 992px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 25px;
+                padding-top: 40px;
+                transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                backdrop-filter: blur(10px);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+            font-family: 'Agency FB';
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-family: 'Agency FB';
+            background: linear-gradient(135deg, #0e2930, #bed3ed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: #cfdce5;
+            max-width: 700px;
+            font-family: 'Agency FB';
+            margin: 0 auto 25px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .controls {
+            display: flex;
+            font-family: 'Agency FB';
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .search-container {
+            position: relative;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 16px 20px 16px 50px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Agency FB';
+            outline: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        #searchInput:focus {
+            background: rgba(255, 255, 255, 0.15);
+            font-family: 'Agency FB';
+            box-shadow: 0 0 20px rgba(145, 239, 253, 0.4);
+            border-color: rgba(99, 255, 247, 0.4);
+        }
+
+        #searchInput::placeholder {
+            color: rgba(207, 220, 229, 0.7);
+        }
+
+        .search-icon {
+            position: absolute;
+            font-family: 'Agency FB';
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(207, 220, 229, 0.7);
+            font-size: 1.2rem;
+        }
+
+        .category-filters {
+            display: flex;
+            gap: 15px;
+            font-family: 'Agency FB';
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 12px 25px;
+            font-family: 'Agency FB';
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #a7d1d9;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            font-family: 'Agency FB';
+            background: linear-gradient(135deg, #0e2930, #bed3ed);
+            color: #ffffff;
+            border-color: transparent;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-section {
+            margin-bottom: 60px;
+            font-family: 'Agency FB';
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Agency FB';
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            font-family: 'Agency FB';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0e2930, #bed3ed);
+            font-size: 1.5rem;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            font-family: 'Agency FB';
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            font-family: 'Agency FB';
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(144, 255, 249, 0.3);
+            border-color: rgba(37, 224, 177, 0.3);
+            font-family: 'Agency FB';
+        }
+
+        .product-img {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            font-family: 'Agency FB';
+            margin-bottom: 12px;
+            color: #b9f7f7;
+        }
+
+        .product-desc {
+            color: #cfdce5;
+            margin-bottom: 20px;
+            font-family: 'Agency FB';
+            flex-grow: 1;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #25E0B1;
+            margin-bottom: 20px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0e2930, #bed3ed);
+            color: #051b22;
+            border: none;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+
+        .no-results i {
+            font-size: 4rem;
+            color: #63A3FF;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .no-results h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #b9f7f7;
+        }
+
+        .no-results p {
+            color: #cfdce5;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px 30px;
+            margin-top: 70px;
+            color: #cfdce5;
+            font-size: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .social-icons a {
+            color: #b9f7f7;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            color: white;
+            background: rgba(0, 194, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 114, 255, 0.3);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #b9f7f7;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #8fa3b0;
+        }
+
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.3rem;
+            }
+
+            .category-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .search-container {
+                width: 100%;
+            }
+
+            .category-filters {
+                justify-content: flex-start;
+            }
+
+            .category-header {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .category-title {
+                font-size: 1.3rem;
+            }
+
+            .product-title {
+                font-size: 1.2rem;
+            }
+
+            .product-desc {
+                font-size: 0.95rem;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+        }
+
+        #bb {
+            background: rgba(243, 247, 254, 0.9);
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            width: 120px;
+            height: 50px;
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #bb:hover {
+            background: #011216;
+            box-shadow: 0 0 0 5px rgba(6, 47, 71, 0.5);
+        }
+
+        .a {
+            color: #011216;
+            text-decoration: none;
+            display: flex;
+            font-family: 'Agency FB';
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        #bb:hover .a {
+            color: #b9f7f7;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <header>
+            <button id="bb"><a class="a" href="index.html"><i class="fas fa-arrow-left"></i> Go Back</a></button>
+        </header> -->
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-logo">
+            <i class="fas fa-brain"></i>
+            <span>AiThioria</span>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="Index.html" class="nav-link">Home</a></li>
+            <li><a href="#About" class="nav-link">About Us</a></li>
+            <li><a href="products.html" class="nav-link">Products</a></li>
+            <li><a href="Blog.html" class="nav-link">Blog</a></li>
+            <li><a href="Ai Studys.html" class="nav-link">AI Study's</a></li>
+            <li><a href="Contact.html" class="nav-link">Contact</a></li>
+            <li><a href="Add to cart.html" class="nav-link nav-cta">Add to Cart</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h2>Discover Our Blog</h2>
+        <p>Explore our comprehensive collection of AI resources, tools, and blogs designed to empower your journey
+            in artificial intelligence and machine learning.</p>
+    </section>
+
+    <div class="controls">
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Search products by name, category, or description...">
+        </div>
+
+        <div class="category-filters">
+            <button class="filter-btn" data-category="ai">Artificial Intelligence</button>
+            <button class="filter-btn" data-category="robotics">Robotics</button>
+            <button class="filter-btn" data-category="deep-learning">Deep Learning</button>
+            <button class="filter-btn" data-category="machine-learning">Machine Learning</button>
+            <button class="filter-btn" data-category="computer-science">Computer Science</button>
+            <button class="filter-btn" data-category="python">Python</button>
+            <button class="filter-btn" data-category="JavaScript">JavaScript</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- AI Books Section -->
+        <section class="category-section" data-category="ai">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3 class="category-title">Artificial Intelligence Blogs</h3>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="p1.png" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Artificial Intelligence: A Beginner's Guide</h4>
+                        <p class="product-desc">"Artificial Intelligence is no longer science fiction — it’s a tool
+                            shaping our daily
+                            lives, and here’s your simple path to understanding it."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 10,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="p2.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Artificial Intelligence: A New Synthesis – Nils J. Nilsson</h4>
+                        <p class="product-desc">"Nils J. Nilsson’s Artificial Intelligence: A New Synthesis blends
+                            theory, history, and
+                            practical methods into a single, accessible guide to the evolving world of AI."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 11,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="p3.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Reinforcement Learning: An Introduction – Richard S. Sutton and
+                            Andrew G.
+                            Barto</h4>
+                        <p class="product-desc">"Sutton and Barto’s Reinforcement Learning: An Introduction unlocks
+                            the art of teaching
+                            machines through trial, error, and reward-driven learning."</p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 12,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="p4.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Life 3.0: Being Human in the Age of Artificial Intelligence – Max
+                            Tegmark</h4>
+                        <p class="product-desc">"Max Tegmark’s Life 3.0 explores how AI could shape the future of
+                            humanity — from
+                            utopian dreams to existential risks."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 13,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="p5.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">The Alignment Problem – Brian Christian</h4>
+                        <p class="product-desc">"Brian Christian’s The Alignment Problem dives into the urgent
+                            challenge of ensuring AI
+                            systems understand and uphold human values."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 14,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="p6.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">The Elements of Statistical Learning – Trevor Hastie, Robert
+                            Tibshirani, Jerome
+                            Friedman</h4>
+                        <p class="product-desc">>T"Hastie, Tibshirani, and Friedman’s The Elements of Statistical
+                            Learning is a
+                            cornerstone guide to the mathematical foundations powering modern AI and machine
+                            learning."</p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 15,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="p7.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Our Final Invention: Artificial Intelligence and the End of the
+                            Human Era –
+                            James Barrat</h4>
+                        <p class="product-desc">"James Barrat’s Our Final Invention warns of AI’s promise and peril,
+                            asking whether
+                            creating intelligent machines could be humanity’s last great act."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 15,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="p8.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Human Compatible: Artificial Intelligence and the Problem of
+                            Control –
+                            Stuart Russell</h4>
+                        <p class="product-desc">"Stuart Russell’s Human Compatible tackles the critical question of
+                            how to design AI
+                            that remains under human control — and aligned with our values."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 16,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="p9.jpeg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Building Intelligent Agents – Michael Wooldridgel</h4>
+                        <p class="product-desc">"Michael Wooldridge’s Building Intelligent Agents offers a practical
+                            roadmap to
+                            designing autonomous systems that can perceive, reason, and act in the real world."</p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 17,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="p10.jpeg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Architects of Intelligence – Martin Ford</h4>
+                        <p class="product-desc">"Martin Ford’s Architects of Intelligence gathers insights from AI’s
+                            leading minds on
+                            how intelligent machines will reshape our future."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 18,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Robotics Section -->
+        <section class="category-section" data-category="robotics">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3 class="category-title">Robotics Blogs</h3>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pp1.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Introduction to Robotics: Mechanics and Control – John J. Craig
+                        </h4>
+                        <p class="product-desc">"John J. Craig’s Introduction to Robotics blends theory and practice
+                            to explain the
+                            mechanics, control, and intelligence behind modern robots."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 19,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pp2.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Robotics, Vision and Control – Peter Corke</h4>
+                        <p class="product-desc">"Peter Corke’s Robotics, Vision and Control bridges the gap between
+                            robotic mechanics
+                            and computer vision, guiding readers from theory to real-world applications."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 20,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pp3.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Modern Robotics: Mechanics, Planning, and Control – Kevin M. Lynch
+                            & Frank C. Park</h4>
+                        <p class="product-desc">"Lynch and Park’s Modern Robotics offers a comprehensive guide to
+                            the mechanics, motion
+                            planning, and control strategies that power today’s intelligent machines."</p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 21,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pp4.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Probabilistic Robotics – Sebastian Thrun, Wolfram Burgard, Dieter
+                            Fox
+                        </h4>
+                        <p class="product-desc">"Thrun, Burgard, and Fox’s Probabilistic Robotics reveals how
+                            uncertainty, probability,
+                            and algorithms combine to make robots smarter and more reliable."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 22,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pp5.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Robotics for Beginners – Aaron Nelson</h4>
+                        <p class="product-desc">"Aaron Nelson’s Robotics for Beginners is a friendly gateway into
+                            building, programming,
+                            and understanding robots from the ground up."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 23,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pp6.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">The Robotics Primer – Maja J. Matarić</h4>
+                        <p class="product-desc">"Maja J. Matarić’s The Robotics Primer offers an accessible
+                            introduction to the
+                            principles, history, and future of robotics for learners at any level."</p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 24,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pp7.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Robot Operating System (ROS) for Absolute Beginners – Lentin
+                            Joseph
+                        </h4>
+                        <p class="product-desc">"Lentin Joseph’s Robot Operating System (ROS) for Absolute Beginners
+                            simplifies the
+                            powerful ROS platform, guiding newcomers from setup to real-world robot control."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 22,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pp8.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Bio-Inspired Artificial Intelligence: Theories, Methods, and
+                            Technologies – Dario</h4>
+                        <p class="product-desc">"Floreano and Mattiussi’s Bio-Inspired Artificial Intelligence
+                            explores how nature’s
+                            designs inspire smarter algorithms, adaptable robots, and innovative AI solutions."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 23,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pp9.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Autonomous Mobile Robots – Roland Siegwart, Illah Nourbakhsh, &
+                            Davide</h4>
+                        <p class="product-desc">"Siegwart, Nourbakhsh, and Scaramuzza’s Autonomous Mobile Robots
+                            covers the principles,
+                            algorithms, and technologies that enable robots to navigate the world on their own."</p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 24,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pp10.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Make: Arduino Bots and Gadgets – Kimmo Karvinen & Tero Karvinen
+                        </h4>
+                        <p class="product-desc">"Kimmo and Tero Karvinen’s Make: Arduino Bots and Gadgets turns
+                            creative ideas into
+                            working robots and smart devices using hands-on Arduino projects."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 25,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep Learning Section -->
+        <section class="category-section" data-category="deep-learning">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3 class="category-title">Deep Learning Blogs</h3>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pd1.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Deep Learning – Ian Goodfellow, Yoshua Bengio & Aaron Courville
+                        </h4>
+                        <p class="product-desc">"Goodfellow, Bengio, and Courville’s Deep Learning is the definitive
+                            guide to the neural
+                            networks powering today’s AI revolution."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 26,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pd2.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Neural Networks and Deep Learning – Michael Nielsen</h4>
+                        <p class="product-desc">"Michael Nielsen’s Neural Networks and Deep Learning offers a clear,
+                            interactive journey
+                            into how neural networks learn and power modern AI."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 27,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pd3.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Deep Learning with Python – François Chollet</h4>
+                        <p class="product-desc">"François Chollet’s Deep Learning with Python combines intuitive
+                            explanations with
+                            practical Keras examples to bring neural networks to life."</p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 28,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pd4.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Pattern Recognition and Machine Learning – Christopher M. Bishop
+                        </h4>
+                        <p class="product-desc">"Christopher Bishop’s Pattern Recognition and Machine Learning is a
+                            comprehensive guide
+                            to the statistical methods that help machines detect patterns and make predictions."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 29,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pd5.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow
+                            – Aurélien</h4>
+                        <p class="product-desc">"Aurélien Géron’s Hands-On Machine Learning blends theory with
+                            real-world coding
+                            projects to help you master AI using Scikit-Learn, Keras, and TensorFlow."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>Jun 30,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pd6.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Grokking Deep Learning – Andrew Trask</h4>
+                        <p class="product-desc">"Andrew Trask’s Grokking Deep Learning makes neural networks
+                            understandable by building
+                            them from scratch, step by step."</p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 1,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pd7.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Deep Reinforcement Learning Hands-On - Maxim Lapan
+                        </h4>
+                        <p class="product-desc">"Maxim Lapan’s Deep Reinforcement Learning Hands-On guides you
+                            through building smart
+                            agents using practical projects and cutting-edge algorithms."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 2,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pd8.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Machine Learning Yearning – Andrew Ng</h4>
+                        <p class="product-desc">"Andrew Ng’s Machine Learning Yearning offers practical strategies
+                            for structuring AI
+                            projects to achieve faster, smarter results."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 3,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pd9.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Natural Language Processing with Transformers – Lewis Tunstall,
+                            Leandro von Werra</h4>
+                        <p class="product-desc">"Tunstall, von Werra, and Wolf’s Natural Language Processing with
+                            Transformers is a
+                            hands-on guide to building cutting-edge language models for real-world applications."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 4,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pd10.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Deep Learning for Coders with fastai and PyTorch – Jeremy Howard &
+                            Sylvain Gugger
+                        </h4>
+                        <p class="product-desc">"Howard and Gugger’s Deep Learning for Coders makes state-of-the-art
+                            AI accessible,
+                            teaching you to build powerful models with fastai and PyTorch."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 5,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Machine Learning Section -->
+        <section class="category-section" data-category="machine-learning">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="category-title">Machine Learning Blogs</h3>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pm1.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Pattern Recognition and Machine Learning – Christopher M. Bishop
+                        </h4>
+                        <p class="product-desc">"Christopher M. Bishop’s Pattern Recognition and Machine Learning is
+                            a foundational
+                            guide to the statistical and computational techniques that power intelligent systems."
+                        </p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 6,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pm2.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow
+                            – Aurélien</h4>
+                        <p class="product-desc">"Christopher M. Bishop’s Pattern Recognition and Machine Learning is
+                            a foundational
+                            guide to the statistical and computational techniques that power intelligent systems."
+                        </p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 7,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pm3.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Machine Learning: A Probabilistic Perspective – Kevin P. Murphy
+                        </h4>
+                        <p class="product-desc">"Kevin P. Murphy’s Machine Learning: A Probabilistic Perspective
+                            unpacks the math and
+                            intuition behind probabilistic models that drive smarter, data-driven AI."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 8,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pm4.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Understanding Machine Learning: From Theory to Algorithms – Shai
+                            Shalev-Shwartz
+                        </h4>
+                        <p class="product-desc">"Shalev-Shwartz and Ben-David’s Understanding Machine Learning
+                            bridges theory and
+                            practice, offering a clear path from mathematical foundations to real-world algorithms."
+                        </p>
+                    </div>
+                    <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 9, 2025</span><span>•</span>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pm5.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Machine Learning for Absolute Beginners – Oliver Theobald</h4>
+                        <p class="product-desc">"Tunstall, von Werra, and Wolf’s Natural Language Processing with
+                            Transformers is a
+                            hands-on guide to building cutting-edge language models for real-world applications."
+                        </p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 10,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pm6.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Python Machine Learning" – Sebastian Raschka & Vahid Mirjalili
+                        </h4>
+                        <p class="product-desc">"Raschka and Mirjalili’s Python Machine Learning combines theory,
+                            code, and practical
+                            projects to help you master machine learning with Python."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 11,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pm7.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Introduction to Machine Learning with Python – Andreas C. Müller &
+                            Sarah Guido
+                        </h4>
+                        <p class="product-desc">"Müller and Guido’s Introduction to Machine Learning with Python
+                            offers a hands-on
+                            approach to building and deploying machine learning models using scikit-learn."
+                        </p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 12,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pm8.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">The Hundred-Page Machine Learning Book – Andriy Burkov</h4>
+                        <p class="product-desc">"Andriy Burkov’s The Hundred-Page Machine Learning Book distills
+                            essential ML concepts
+                            into a concise, no-fluff guide for quick learning and reference."
+                        </p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 13,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pm9.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Elements of Statistical Learning – Trevor Hastie, Robert
+                            Tibshirani & Jerome Friedman
+                        </h4>
+                        <p class="product-desc">"Hastie, Tibshirani, and Friedman’s The Elements of Statistical
+                            Learning is a definitive
+                            guide to the statistical models and methods at the core of modern machine learning."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 14,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pm10.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Machine Learning – Tom M. Mitchell
+                        </h4>
+                        <p class="product-desc">"Tom M. Mitchell’s Machine Learning lays the groundwork for
+                            understanding how algorithms
+                            learn from data to make predictions and decisions."
+                        </p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 15,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Computer Science Section -->
+        <section class="category-section" data-category="computer-science">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="category-title">Computer Science Blogs</h3>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pc1.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Structure and Interpretation of Computer Programs (SICP) – Harold
+                            Abelson & Gerald Jay
+                            Sussman
+                        </h4>
+                        <p class="product-desc">"Abelson and Sussman’s Structure and Interpretation of Computer
+                            Programs is a timeless
+                            classic that teaches the art and science of programming through elegant principles and
+                            examples."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 16,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pc2.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Introduction to the Theory of Computation – Michael Sipser</h4>
+                        <p class="product-desc">"Michael Sipser’s Introduction to the Theory of Computation offers a
+                            clear and rigorous
+                            journey through automata, computability, and complexity theory."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 17,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pc3.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Computer Systems: A Programmer’s Perspective – Randal E. Bryant &
+                            David R.</h4>
+                        <p class="product-desc">"Bryant and O’Hallaron’s Computer Systems: A Programmer’s
+                            Perspective reveals how
+                            software interacts with hardware, bridging the gap between code and machine."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 18,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pc4.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Algorithms – Robert Sedgewick & Kevin Wayne
+                        </h4>
+                        <p class="product-desc">"Sedgewick and Wayne’s Algorithms provides a deep yet accessible
+                            exploration of the data
+                            structures and algorithms that power efficient computing."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 19,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pc5.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Introduction to Algorithms" – Cormen, Leiserson, Rivest & Stein
+                            (CLRS)</h4>
+                        <p class="product-desc">"Cormen, Leiserson, Rivest, and Stein’s Introduction to Algorithms
+                            is the definitive
+                            reference for mastering algorithm design and analysis."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 20,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pc6.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Operating System Concepts – Abraham Silberschatz, Peter B. Galvin
+                        </h4>
+                        <p class="product-desc">"Silberschatz, Galvin, and Gagne’s Operating System Concepts offers
+                            a comprehensive look
+                            at the principles and design of modern operating systems."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 21,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pc7.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">The Art of Computer Programming" – Donald E. Knuth
+                        </h4>
+                        <p class="product-desc">"Donald Knuth’s The Art of Computer Programming is a monumental work
+                            that delves into
+                            the timeless algorithms and techniques shaping computer science."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 22,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pc8.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Clean Code – Robert C. Martin (Uncle Bob)</h4>
+                        <p class="product-desc">"Robert C. Martin’s Clean Code teaches the principles and practices
+                            for writing
+                            readable, maintainable, and elegant software."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 23,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pc9.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">The Hidden Language of Computer Hardware and Software – Charles
+                            Petzold
+                        </h4>
+                        <p class="product-desc">"Charles Petzold’s The Hidden Language of Computer Hardware and
+                            Software unveils how
+                            binary code, circuits, and logic form the foundation of all computing."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 24,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="pc10.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Design Patterns: Elements of Reusable Object-Oriented Software" –
+                            Erich Gamma et al.
+                            (Gang of Four)
+                        </h4>
+                        <p class="product-desc">"The Gang of Four’s Design Patterns is the classic guide to crafting
+                            flexible, reusable,
+                            and elegant object-oriented software solutions."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 25,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Python Section -->
+        <section class="category-section" data-category="python">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="category-title">Python Blogs</h3>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Tp1.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Python Crash Course – Eric Matthes
+                        </h4>
+                        <p class="product-desc">"Eric Matthes’ Python Crash Course is a hands-on introduction to
+                            Python, combining
+                            fundamentals with fun projects to build real-world skills."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 26,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Tp2.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Automate the Boring Stuff with Python – Al Sweigart</h4>
+                        <p class="product-desc">"Al Sweigart’s Automate the Boring Stuff with Python shows how to
+                            use Python to save
+                            time by turning everyday tasks into automated scripts."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 27,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Tp3.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Fluent Python – Luciano Ramalho</h4>
+                        <p class="product-desc">"Luciano Ramalho’s Fluent Python dives deep into Python’s most
+                            powerful features,
+                            helping you write clear, concise, and Pythonic code."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 28,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Tp4.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Effective Python: 90 Specific Ways to Write Better Python– Brett
+                            Slatkin
+                        </h4>
+                        <p class="product-desc">"Brett Slatkin’s Effective Python offers 90 actionable tips to
+                            improve code quality,
+                            readability, and efficiency in Python programming."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 29,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Tp5.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Learning Python" – Mark Lutz</h4>
+                        <p class="product-desc">"Mark Lutz’s Learning Python is a comprehensive guide that takes you
+                            from Python basics
+                            to advanced programming concepts with clarity and depth."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>July 30,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Tp6.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Python for Data Analysis – Wes McKinney
+                        </h4>
+                        <p class="product-desc">"Wes McKinney’s Python for Data Analysis teaches practical data
+                            manipulation, analysis,
+                            and visualization using Python’s powerful libraries like pandas and NumPy."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 1,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Tp7.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Think Python: How to Think Like a Computer Scientist – Allen B.
+                            Downe
+                        </h4>
+                        <p class="product-desc">"Allen B. Downey’s Think Python helps readers develop a programmer’s
+                            mindset while
+                            mastering Python from fundamentals to problem-solving."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 2,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Tp8.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Python Cookbook – David Beazley & Brian K. Jones</h4>
+                        <p class="product-desc">"Beazley and Jones’ Python Cookbook provides practical recipes for
+                            solving everyday
+                            Python programming challenges efficiently and elegantly."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 3,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Tp9.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Head-First Python – Paul Barry
+                        </h4>
+                        <p class="product-desc">"Paul Barry’s Head-First Python offers an engaging, visually rich
+                            approach to learning
+                            Python through hands-on projects and real-world examples."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 4,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Tp10.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Black Hat Python: Python Programming for Hackers and Pentesters –
+                            Justin Seitz
+                        </h4>
+                        <p class="product-desc">"Justin Seitz’s Black Hat Python explores how Python can be used for
+                            ethical hacking,
+                            penetration testing, and cybersecurity projects."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 5,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- JavaScript Section -->
+        <section class="category-section" data-category="JavaScript">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="category-title">JavaScript Blogs</h3>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Jp1.png" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Eloquent JavaScript – Marijn Haverbeke
+                        </h4>
+                        <p class="product-desc">"Marijn Haverbeke’s Eloquent JavaScript teaches the art of writing
+                            elegant, effective
+                            JavaScript through clear explanations and hands-on exercises."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 6,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Jp2.png" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">JavaScript: The Definitive Guide" – David Flanagan</h4>
+                        <p class="product-desc">"David Flanagan’s JavaScript: The Definitive Guide is the ultimate
+                            reference for
+                            mastering JavaScript, from core concepts to advanced techniques."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 7,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Jp3.png" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">You Don’t Know JS (YDKJS) Series – Kyle Simpson</h4>
+                        <p class="product-desc">"Kyle Simpson’s You Don’t Know JS series dives deep into
+                            JavaScript’s inner workings,
+                            revealing the nuances every developer should know."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 8,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Jp4.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">JavaScript & jQuery: Interactive Front-End Web Development – Jon
+                            Duckett
+                        </h4>
+                        <p class="product-desc">"Jon Duckett’s JavaScript & jQuery makes front-end development
+                            approachable, teaching
+                            interactive web design with clarity and practical examples."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 9,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Jp5.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">JavaScript: The Good Parts – Douglas Crockford</h4>
+                        <p class="product-desc">"Douglas Crockford’s JavaScript: The Good Parts highlights the
+                            elegant, reliable
+                            features of JavaScript while avoiding its pitfalls."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 10,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Jp6.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Learning JavaScript Design Patterns – Addy Osmani
+                        </h4>
+                        <p class="product-desc">"Addy Osmani’s Learning JavaScript Design Patterns teaches how to
+                            write modular,
+                            reusable, and maintainable JavaScript code using proven design patterns."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 11,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Jp7.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">JavaScript: The New Toys – T.J. Crowder
+                        </h4>
+                        <p class="product-desc">"T.J. Crowder’s JavaScript: The New Toys explores the latest
+                            features and modern tools
+                            that make JavaScript development faster, cleaner, and more powerful."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 12,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Jp8.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Secrets of the JavaScript Ninja – John Resig & Bear Bibeault</h4>
+                        <p class="product-desc">"Resig and Bibeault’s Secrets of the JavaScript Ninja teaches
+                            advanced techniques and
+                            best practices to become a masterful JavaScript developer."</p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 13,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Jp9.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">DOM Enlightenment – Cody Lindley
+                        </h4>
+                        <p class="product-desc">"Cody Lindley’s DOM Enlightenment provides a clear, practical guide
+                            to understanding and
+                            manipulating the Document Object Model for dynamic web development."
+                        </p>
+
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 14,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Jp10.jpg" alt="AI Book">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Programming JavaScript Applications – Eric Elliott
+                        </h4>
+                        <p class="product-desc">"Eric Elliott’s Programming JavaScript Applications teaches how to
+                        </p>
+                        <div class="meta"><i class="fa-regular fa-calendar"></i><span>August 15,
+                                2025</span><span>•</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="social-icons">
+            <a href="https://web.facebook.com/profile.php?id=61570182430210"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/sufiankhanawan/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/muhammedsufianawan1/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/SufianKhan-Code/AiThioria"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Contact.html">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <p class="copyright">© 2025 AiThioria. All rights reserved.</p>
+        <p>Designed with ❤️ for developers and learners worldwide</p>
+    </div>
+    </div>
+
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const productCards = document.querySelectorAll('.product-card');
+        const categorySections = document.querySelectorAll('.category-section');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        // Search function
+        searchInput.addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+            let visibleProducts = 0;
+
+            productCards.forEach(card => {
+                const title = card.querySelector('.product-title').textContent.toLowerCase();
+                const desc = card.querySelector('.product-desc').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                    visibleProducts++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show/hide category sections
+            categorySections.forEach(section => {
+                const products = section.querySelectorAll('.product-card');
+                let visibleInSection = 0;
+
+                products.forEach(product => {
+                    if (product.style.display !== 'none') {
+                        visibleInSection++;
+                    }
+                });
+
+                section.style.display = visibleInSection > 0 ? 'block' : 'none';
+            });
+        });
+
+        // Category filtering
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const category = this.getAttribute('data-category');
+
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Show/hide categories
+                categorySections.forEach(section => {
+                    if (category === 'all' || section.getAttribute('data-category') === category) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+
+        // Navbar functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            // Toggle mobile menu
+            hamburger.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function () {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', function () {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
